@@ -31,3 +31,14 @@
 body {
     background-color: var(--white) ;
 }
+
+/* .navbar {
+    transition: 1s;
+}
+
+.scrolledNavbar {
+    background-color: var(--white);
+    margin-inline: auto;
+    margin: 2vh;
+    border-radius: 15px;
+} */
