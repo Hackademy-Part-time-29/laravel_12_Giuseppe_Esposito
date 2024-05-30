@@ -65,6 +65,16 @@ Requisiti
         Bootstrap
         Vite
         Mailito o Mailtrap
+
+_______________________________________________________________________________
+
+Passaggi necessari Fortify
+
+- Boot
+
+- Vista
+
+- Form
                         
 
 
