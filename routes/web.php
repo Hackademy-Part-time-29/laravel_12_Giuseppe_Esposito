@@ -16,10 +16,10 @@ Route::get('/contact-us', [MailController::class, 'showForm'])->name("contact-us
 
 Route::post('/send-mail', [MailController::class, 'sendMail'])->name("send-mail");
 
-Route::get('/articles', [ArticleController::class, 'index'])->name('articles');
+Route::get('/articles', [ArticleController::class, 'index'])->middleware(['auth', 'verified'])->name('articles');
 
-Route::get('/article/id={id}', [ArticleController::class, 'show'])->name("article");
+Route::get('/article/id={id}', [ArticleController::class, 'show'])->middleware(['auth', 'verified'])->name("article");
 
-Route::get('/article/create', [ArticleController::class, 'createArticle'])->name("create-article");
+Route::get('/article/create', [ArticleController::class, 'createArticle'])->middleware(['auth', 'verified'])->name("create-article");
 
-Route::post('/article/store', [ArticleController::class, 'store'])->name("article-store");
+Route::post('/article/store', [ArticleController::class, 'store'])->middleware(['auth', 'verified'])->name("article-store");

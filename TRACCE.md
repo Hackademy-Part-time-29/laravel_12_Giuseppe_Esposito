@@ -68,13 +68,20 @@ Requisiti
 
 _______________________________________________________________________________
 
-Passaggi necessari Fortify
+Passaggi necessari Fortify per l'autenticazione
 
 - Boot
 
 - Vista
 
 - Form
+
+Passaggi necessari per email verification
+ 
+ - "implements MustVerifyEmail" al Model User
+
+ - Decommentare riga "Features::emailVerification()" in
+    fortify php
                         
 
 

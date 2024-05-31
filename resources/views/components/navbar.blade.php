@@ -24,7 +24,7 @@
         <li class="nav-item dropdown me-2 d-flex">
           @auth
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Bentornato, {{auth()->user()->name}}
+            Benvenuto, {{auth()->user()->name}}
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#" onclick="
@@ -36,11 +36,11 @@
           </form>
           </ul>
           @else
-          <a class="nav-link dropdown-toggle" href="/login" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Accedi
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ospite</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/register">Registrati</a></li>
+            <li><a class="dropdown-item d-flex align-items-center" href="/login">Accedi</a></li>
+            <hr>
+            <li><a class="dropdown-item d-flex align-items-center" href="/register">Registrati</a></li>
           </ul>
           @endauth
         </li>

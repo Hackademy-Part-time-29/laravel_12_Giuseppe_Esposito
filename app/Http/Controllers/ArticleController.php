@@ -12,6 +12,13 @@ use App\Http\Requests\StoreArticleRequest;
 
 class ArticleController extends Controller
 {
+    // Middleware che protegge le funzioni delle rotte
+    // (Non si usa quasi mai, il metodo corretto è proteggere direttamente le rotte)
+   
+    // public function __construct(){
+    //     $this->middleware(['auth', 'verified']);
+    // }
+
       // Dimentichiamoci di inserire gli articoli così da oggi in poi
     // public $articles = [
     //     1 =>["name" => "Articolo 1", "id" => "1", "description" => "lorem ipsum"],
