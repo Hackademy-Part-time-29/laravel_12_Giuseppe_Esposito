@@ -22,15 +22,27 @@
           <a class="nav-link" href="{{route('create-article')}}">Crea articolo</a>
         </li>
         <li class="nav-item dropdown me-2 d-flex">
+          @auth
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Bentornato, {{auth()->user()->name}}
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" onclick="
+            event.preventDefault();
+            getElementById('form-logout').submit();
+            ">Log out</a></li>
+          <form id="form-logout" class="d-none" method="POST" action="/logout">
+              @csrf
+          </form>
+          </ul>
+          @else
+          <a class="nav-link dropdown-toggle" href="/login" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Accedi
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Log in</a></li>
-            <li><a class="dropdown-item" href="#">Log out</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Registrati</a></li>
+            <li><a class="dropdown-item" href="/register">Registrati</a></li>
           </ul>
+          @endauth
         </li>
       </ul>
     </div>
