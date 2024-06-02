@@ -34,7 +34,22 @@ class ArticleController extends Controller
 
         // $articles = $this->articles;
 
-        $articles = Article::all();
+        $articles = Article::orderBy('created_at', 'DESC')->paginate(10);
+
+        // $articles = Article::where('id','>',10)->paginate(8);
+        // $articles = Article::where('id','>',10)->get();
+        // $article = Article::where('id','>',10)->first();
+        // $article = Article::where('id','>',10)->firstOrFail();
+
+        /*
+        Alcuni metodi dei modelli
+        - all() --> prende tutte le categorie
+        - find() --> prende la categoria con l'id specificato
+        - findOrFail() --> trova la categoria o fallisce
+        - orderBy() --> ordina la categoria per un campo
+        - where() =,>,<
+        - first() [firstOrFail()]
+        */
     
         return view('pages.articles.articles', compact('title', 'articles'));
     }

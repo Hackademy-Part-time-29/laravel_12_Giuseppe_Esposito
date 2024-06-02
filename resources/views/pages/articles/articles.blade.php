@@ -9,5 +9,6 @@
                 </div>
             @endforeach
         </div>
-
+        
+        {{$articles->links()}}
 </x-app>

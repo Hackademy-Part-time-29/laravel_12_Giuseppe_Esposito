@@ -32,7 +32,8 @@
         <a href="{{route('password.request')}}">Password dimenticata?</a>
     </span>
     <br>
-  <button type="submit" class="btn btn-primary mt-4">Login</button>
+  <button type="submit" class="btn btn-primary mt-4 mb-4">Login</button>
+  <p>Nuovo sul nostro sito? <a href="/register">Registrati</a></p>
 </form>
     
 </x-app>

@@ -13,4 +13,8 @@ class HomeController extends Controller
     public function aboutUs(){
         return view('pages.about-us');
     }
+
+    public function dashboard(){
+        return view('dashboard');
+    }
 }
