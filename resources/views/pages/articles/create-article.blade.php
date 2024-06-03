@@ -28,7 +28,7 @@
                 @enderror
                 </div>
                 <div class="form-floating">
-                    <textarea class="form-control @error('description') is-invalid @enderror" style="height: 100px" name="description">{{old('description')}}</textarea>
+                    <textarea class="form-control @error('description') is-invalid @enderror" style="height: 100px" name="description" value="{{old('description')}}"></textarea>
                     <label for="floatingTextarea2">Contenuto</label>
                 @error('description')
                     <span class="small text-danger">{{$message}}</span>
